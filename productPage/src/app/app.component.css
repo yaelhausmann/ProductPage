@@ -1,0 +1,67 @@
+@import url(nurom_bold.ttf);
+body{
+  background-color: #e3e2e2;
+}
+.full-page {
+  max-width: 768px;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+header{
+  padding: 60px 0;
+}
+header  #img_header{
+  width:240px
+}
+.img_top {
+  background-image: url('~assets/gamme_booster.png');
+  background-size: cover;
+  height: 435px;
+  background-position: center;
+  position: relative;
+}
+#img_product{
+  text-decoration: none;
+  position: absolute;
+  right: 100px;
+  padding: 25px;
+  bottom: 60px;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0.1px;
+}
+.big_title{
+  font-size: 84px;
+  font-family: nurom-bold;
+  font-weight: 600;
+}
+.title{
+  font-size: 48px;
+  font-family: nurom-bold;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#img_rect{
+  width: 80%;
+  height: 20px;
+}
+.title2{
+  margin-top: 40px;
+}
+.content_sec1{
+  padding: 30px 70px;
+  font-size: 20px;
+}
+#blacklist{
+  text-decoration: underline;
+  font-size: 24px;
+  color:black;
+  margin-bottom: 40px;
+}
+.title3{
+  max-width: 75%;
+  margin: 40px auto
+}
+
