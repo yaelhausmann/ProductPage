@@ -1,0 +1,58 @@
+[
+  {
+    "page_id": "95",
+    "range": "PRET_VENTE",
+    "titre": "BRUME EAU DE RAISIN",
+    "sous_titre": null,
+    "nom": "BRUME EAU DE RAISIN",
+    "slider_image": "",
+    "conseils_utilisation": "Bien agiter avant pulvérisation afin d’homogénéiser l’ensemble des actifs.Brumiser depuis votre décolleté, remonter vers le cou puis pulvériser l’ensemble du visage.Astuces : appliquer plusieurs fois dans la journée afin d’optimiser la protection des pollutions.",
+    "slider2image": "",
+    "ingredients": "Grape/Vitis Vinifera Fruit Water, Water/Aqua, Glycerin, Heptyl Glucoside, Propanediol, Caesalpinia Spinosa Fruit Extract, Caprylyl/Capryl Glucoside, Citric Acid, Kappaphycus Alvarezii Extract, Sodium Hydroxide, Tropaeolum Majus Flower/Leaf/Stem Extract, Sodium Gluconate, Schizandra Chinensis Fruit Extract, 1,2-Hexanediol, Caprylyl Glycol, Heptanol,Allantoin, Fragrance/Parfum, Sodium Benzoate, Potassium Sorbate, Chlorphenesin",
+    "vertus": "",
+    "temoignage_date": "Blandine <br> 07/01/2022",
+    "temoignage": "Excellent contour des yeux, il défatigue instantanément mon regard. Agréable à poser, une goutte suffit pour chaque œil. "
+  },
+  {
+    "page_id": "92",
+    "range": "PRET_VENTE",
+    "titre": "SERUM COLLAGENE 30 ML",
+    "sous_titre": null,
+    "nom": "",
+    "slider_image": "",
+    "conseils_utilisation": "",
+    "slider2image": "",
+    "ingredients": "",
+    "vertus": "",
+    "temoignage_date": "",
+    "temoignage": ""
+  },
+ {
+   "page_id": "01",
+   "range": "BOOSTER",
+    "titre": "BOOSTER 01 HYDRATATION INTENSE 15 ML",
+    "sous_titre": "01",
+    "nom": "HYDRATATION INTENSE",
+    "slider_image": "",
+    "conseils_utilisation": "Agiter avant utilisation. Dans 2 noisettes de crème, déposer une à trois gouttes de votre booster. Si vous mélangez plusieurs boosters à la fois, utilisez au maximum 9 gouttes. Ne pas préparer à l’avance. Ne pas utiliser pur. Éviter le contact avec les yeux. ",
+    "slider2image": "",
+    "ingredients": "Water/Aqua, Alcohol Denat., Xylitylglucoside, Anhydroxylitol, Xylitol, Glycerin, Glucose, Helichrysum Stoechas Callus Culture Lysate, Acacia Senegal Gum, Xanthan Gum, Sodium Benzoate, Potassium Sorbate.",
+    "vertus": "Un actif issu de cellules souches pures d' Immortelles des dunes. Ce lysat de cellules végétales, 100% naturel certifié Cosmos, a une composition unique qui lui confère des vertues à l'efficacité prouvée en terme d' hydratation intense et longue durée. Cet allié des peaux sèches résoud l'inflammation et restaure la fonction barrière tout comme l'homéostasie. Ce renforcement permet une meilleure desquamation, apporte soulagement et équilibre à la peau sèche pour augmenter l'élasticité et la souplesse de la peau.",
+    "temoignage_date": "Tania <br> 02/02/2022",
+    "temoignage": "Très agréable et facile à utiliser, ma peau a tendance à être sèche et ce produit l'hydrate très bien. Je l'utilise le matin et je sens que ma peau est bien nourrit et protéger toute la journée. "
+  },
+  {
+    "page_id": "02",
+    "range": "BOOSTER",
+    "titre": "BOOSTER 02 ECLAIRCISSANT & ANTI-TACHES 15 ML",
+    "sous_titre": "02",
+    "nom": "ECLAIRCISSANT & ANTI-TACHES",
+    "slider_image": "",
+    "conseils_utilisation": "Agiter avant utilisation. Dans 2 noisettes de crème, déposer une à trois gouttes de votre booster. Si vous mélangez plusieurs boosters à la fois, utilisez au maximum 9 gouttes. Ne pas préparer à l’avance. Ne pas utiliser pur. Éviter le contact avec les yeux. ",
+    "slider2image": "",
+    "ingredients": "Water/Aqua, Alcohol Denat., Propylene Glycol, Alcohol, Lecithin, Peach/Prunus Persica Leaf Extract, Arbutin, Ascorbic Acid, Apple/Pyrus Malus Fruit Extract, Raspberry/Rubus Idaeus Fruit Extract, Glutathione, Linolenic Acid, Linoleic Acid, Ascorbyl Palmitate, Tocopheryl Acetate.",
+    "vertus": "Un actif issu de la pomme, de la framboise et de la feuille de pêcher, qui allie la synergie de 3 familles de molécules. La vitamine C pour inhiber la tyrosinase afin de réduire la pigmentation et les taches pigmentaires; mais pas que puisque la vitamine C piège les radicaux libres et favorise la synthèse des collagènes. Les flavonoïdes, anti-oxydants, ils participent à la restructuration cutanée & les AHA - acides malique et citrique - qui par leur effet exfoliant, agissent en éliminant les kératinocytes riches en mélanine pour réduire la pigmentation. Les taches sont atténuées, la peau régénérée autant de bénéfices cosmétiques dédiées notamment aux peaux matures.",
+    "temoignage_date": "Denise <br> 11/03/2022",
+    "temoignage": "J'ai des tâches depuis maintenant 5 ans et ce produit est une merveille ! Il les estompe et elles sont nettement moins visibles."
+  }
+]

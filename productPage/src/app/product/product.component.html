@@ -1,0 +1,49 @@
+<div class="main">
+  <div class="full-page" *ngIf="myProduct">
+    <header>
+      <img id="img_header" src="assets/abbi.png"/>
+    </header>
+    <div class="img_top" [ngClass]="{'img_top_brume': myProduct.range === 'PRET_VENTE'}">
+      <img id="img_product" alt="product">
+    </div>
+    <div class="product_sec1">
+      <div class="big_title">{{myProduct.sous_titre}}</div>
+      <div class="title">
+        <span>{{myProduct.nom}}
+          <img id="img_rect" src="assets/rectangle1.png"/>
+        </span></div>
+     <div class="title title2">INCI</div>
+      <div class="content_sec1">{{myProduct.ingredients}} <br><br>
+        ABBI a des convictions : nos formules ne contiennent aucun ingredient polémique.
+      </div>
+      <a href="https://abbi.care/blacklist/" id="blacklist" >Retrouvez notre blacklist ici</a>
+      <div class="title title3">CONSEILS D’UTILISATION</div>
+      <div class="detail" (click)="isShowAdvice = !isShowAdvice"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
+      <div class="advice content_hide" *ngIf="isShowAdvice">{{myProduct.conseils_utilisation}}</div>
+    </div>
+    <div class="product_sec2">
+      <div class="img_center" [ngClass]="{'img_center_brume': myProduct.range === 'PRET_VENTE'}"></div>
+      <div class="title title3">VERTUS</div>
+      <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
+      <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.vertus}}</div>
+    </div>
+    <div class="product_sec3">
+      <div class="title title4">
+        PLUS DE 98% DE NOS CLIENTS
+        RECOMMANDE LES SOINS ABBI*
+      </div>
+      <div class="content_sec">
+       <span> *Résultats d’une enquête auprès de nos clients.</span>
+      <div class="temoignage">
+        <div [innerHTML]="myProduct.temoignage_date"></div>
+        <img src="assets/stars_yellow.png">
+        <div class="content_temoignage">{{myProduct.temoignage}}</div>
+      </div>
+    </div>
+    </div>
+    <footer>
+      <img id="img_footer" src="assets/bb.png"/>
+    </footer>
+  </div>
+</div>
+

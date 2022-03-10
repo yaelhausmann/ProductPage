@@ -1,0 +1,160 @@
+
+
+@font-face {
+  font-family: nurom_bold;
+  src: url('../../assets/nurom_bold.ttf');
+}
+@font-face {
+  font-family: inter_light;
+  src: url('../../assets/Inter-Light-BETA.otf');
+}
+@font-face {
+  font-family: inter_bold;
+  src: url('../../assets/Inter-Bold.otf');
+}
+.main{
+  background-color: #e3e2e2;
+}
+.full-page {
+  max-width: 768px;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 10px 2px #cdcdcd;
+  font-family: inter_light;
+}
+header{
+  padding: 60px 0;
+  @media (max-width: 480px) {
+    padding: 45px 0;
+  }
+}
+header  #img_header{
+  width:240px;
+  @media (max-width: 480px) {
+    width: 170px;
+  }
+}
+.img_top {
+  background-image: url('../../assets/gamme_booster.png');
+  background-size: cover;
+  height: 435px;
+  background-position: center;
+  position: relative;
+  @media (max-width: 480px) {
+    height: 234px;
+  }
+}
+.img_top_brume{
+  background-image: url('../../assets/gamme_brume.png');
+}
+#img_product{
+  text-decoration: none;
+  position: absolute;
+  right: 100px;
+  padding: 25px;
+  bottom: 60px;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0.1px;
+}
+.big_title{
+  margin-top: 20px;
+  font-size: 84px;
+  font-family: nurom_bold;
+  font-weight: 600;
+}
+.title{
+  font-size: 45px;
+  font-family: inter-bold;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#img_rect{
+  width: 80%;
+  height: 20px;
+}
+.title2{
+  margin-top: 40px;
+}
+.content_sec1, .content_hide, .content_sec{
+  padding: 30px 70px;
+  font-size: 20px;
+  @media (max-width: 480px) {
+    padding: 30px;
+    font-size: 18px;
+  }
+}
+
+.product_sec2{
+  margin-top: 30px;
+}
+#blacklist , .detail{
+  text-decoration: underline;
+  font-size: 24px;
+  color:black;
+  margin-bottom: 5px;
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
+}
+.title3{
+  max-width: 75%;
+  margin: 40px auto;
+  @media (max-width: 480px) {
+    max-width: 82%;
+  }
+}
+.arrow {
+  transform: rotate(270deg);
+  height: 32px;
+  padding-left: 3px;
+}
+.detail{
+  display: flex;
+  justify-content: center;
+}
+.img_center {
+  background-image: url('../../assets/img_center_booster.png');
+  background-size: cover;
+  height: 435px;
+  background-position: center;
+  @media (max-width: 480px) {
+    height: 220px;
+  }
+}
+.img_center_brume {
+  background-image: url('../../assets/img_center_brume.png');
+}
+.product_sec3{
+  background-color: #F7F2EC;
+  padding: 30px 40px;
+  margin-top: 30px;
+}
+.title4{
+  font-size: 36px;
+  @media (max-width: 480px) {
+    font-size: 27px;
+  }
+}
+.temoignage{
+  border-bottom: black 2px solid;
+  border-top: black 2px solid;
+  width:85%;
+  margin: 30px auto;
+  padding: 30px;
+}
+.temoignage img{
+  width: 70px;}
+
+.content_temoignage{
+  padding: 40px 75px;
+  @media (max-width: 480px) {
+    padding: 15px;
+  }
+}
+#img_footer{
+  height: 90px;
+  margin-top: 30px;
+}
