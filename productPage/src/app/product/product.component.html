@@ -3,29 +3,49 @@
     <header>
       <img id="img_header" src="assets/abbi.png"/>
     </header>
-    <div class="img_top" [ngClass]="{'img_top_brume': myProduct.range === 'PRET_VENTE'}">
+    <div class="img_top" [ngClass]="{'img_top_brume': myProduct.range === 'PRET_VENTE', 'img_top_echantillon': myProduct.range === 'ECHANTILLON'}">
       <img id="img_product" alt="product">
     </div>
     <div class="product_sec1">
       <div class="big_title">{{myProduct.sous_titre}}</div>
       <div class="title">
         <span>{{myProduct.nom}}
-          <img id="img_rect" src="assets/rectangle1.png"/>
+          <img id="img_rect" src="assets/rectangle1.png" *ngIf="myProduct.range === 'BOOSTER'">
         </span></div>
-     <div class="title title2">INCI</div>
+        <ng-container *ngIf="myProduct.range === 'BOOSTER' || myProduct.range === 'ECHANTILLON'">
+     <div class="title title2" *ngIf="myProduct.range === 'ECHANTILLON'">INCI</div>
+     <div class="title title2" *ngIf="myProduct.range === 'BOOSTER'">Ingrédients</div>
       <div class="content_sec1">{{myProduct.ingredients}} <br><br>
-        ABBI a des convictions : nos formules ne contiennent aucun ingredient polémique.
+        ABBI a des convictions : nos formules ne contiennent aucun ingrédient polémique.
       </div>
       <a href="https://abbi.care/blacklist/" id="blacklist" >Retrouvez notre blacklist ici</a>
       <div class="title title3">CONSEILS D’UTILISATION</div>
-      <div class="detail" (click)="isShowAdvice = !isShowAdvice"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
-      <div class="advice content_hide" *ngIf="isShowAdvice">{{myProduct.conseils_utilisation}}</div>
-    </div>
+      <div class="detail" *ngIf="myProduct.range === 'BOOSTER'" (click)="isShowAdvice = !isShowAdvice"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
+      <div class="advice content_hide" *ngIf="isShowAdvice || (!isShowAdvice && myProduct.range === 'ECHANTILLON')">
+        {{myProduct.conseils_utilisation}}</div>
+    </ng-container>
+    <ng-container *ngIf="myProduct.range === 'PRET_VENTE'">
+      <div class="title title2">CONSEILS D’UTILISATION</div>
+      <div class="content_sec1">{{myProduct.conseils_utilisation}} </div>
+  </ng-container>
+   </div>
     <div class="product_sec2">
-      <div class="img_center" [ngClass]="{'img_center_brume': myProduct.range === 'PRET_VENTE'}"></div>
-      <div class="title title3">VERTUS</div>
-      <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
-      <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.vertus}}</div>
+      <div class="img_center" [ngClass]="{'img_center_brume': myProduct.range === 'PRET_VENTE','img_center_echantillon': myProduct.range === 'ECHANTILLON'}"></div>
+      <ng-container *ngIf="myProduct.range === 'BOOSTER'">
+        <div class="title title3">VERTUS</div>
+        <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
+        <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.vertus}}</div> 
+      </ng-container> 
+      <ng-container *ngIf="myProduct.range === 'PRET_VENTE'">
+        <div class="title title3">Ingrédients</div>
+        <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
+        <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.ingredients}}<br><br>
+          </div>
+          <div class="content_sec1">
+          ABBI a des convictions : nos formules ne contiennent aucun ingrédient polémique.
+        </div>
+        <a href="https://abbi.care/blacklist/" id="blacklist" >Retrouvez notre blacklist ici</a>
+      </ng-container>
     </div>
     <div class="product_sec3">
       <div class="title title4">
@@ -41,6 +61,29 @@
       </div>
     </div>
     </div>
+    <div class="products_sec3">
+      <ng-container *ngFor="let product of allProductsByRange">
+          <!-- <div class="product normal"
+               [ngClass]="{'active': choosenCreamBase && choosenCreamBase.id === product.id , 'noActive': recommendedBase.id !== product.id}"
+          >
+              <div class="selected-for-you" [ngClass]="{'selected-for-you-yumi': APP_CONFIG.isYumiMode}" *ngIf="recommendedBase && recommendedBase.id === product.id">
+                  {{langageService.getKey(Langage.selectForYou)}}
+              </div>
+              <div class="product-container base-edit" [ngClass]="{'product-container-yumi': APP_CONFIG.isYumiMode}">
+                  <div (click)="changeCreamBase(product)" class="click">
+                      <div class="select" ></div>
+                      <span>{{product.wp_textureType}}</span>
+                      <a>{{langageService.getKey(Langage.enrichi)}}{{product.wp_name.toLowerCase()}}</a>
+                      <img [src]="'assets/images/new-design/'+(APP_CONFIG.isYumiMode ? 'flacon-yumi' : 'custom_creme')+'.png'"  class="img-base"/>
+                  </div>
+                     <img src="assets/images/new/trianglePlein.png" [ngClass]="{'opened': showDescBase && showDescBase.id === product.id}"-->
+<!--                             (click)="showDescBase && showDescBase.id === product.id ? showDescBase = null : showDescBase = product">-->
+                  <!-- <div class="savoirPlus" (click)="showDescBase && showDescBase.id === product.id ? showDescBase = null : showDescBase = product">{{langageService.getKey(Langage.enSavoirPus)}}</div>
+              </div> -->
+<!--                    <div class="price" *ngIf="!(storage.get(StorageKey.codeCoupon))"> {{ product.price || '0'}},00€</div>-->
+          <!-- </div> --> 
+      </ng-container>
+  </div>
     <footer>
       <img id="img_footer" src="assets/bb.png"/>
     </footer>

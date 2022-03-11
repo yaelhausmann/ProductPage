@@ -43,11 +43,15 @@ header  #img_header{
   background-position: center;
   position: relative;
   @media (max-width: 480px) {
-    height: 234px;
+    height: 210px;
   }
 }
 .img_top_brume{
   background-image: url('../../assets/gamme_brume.png');
+  box-shadow: 0 0 10px 2px #cdcdcd;
+}
+.img_top_echantillon{
+  background-image: url('../../assets/slider_echantillon.png');
 }
 #img_product{
   text-decoration: none;
@@ -69,6 +73,8 @@ header  #img_header{
   font-size: 45px;
   font-family: inter-bold;
   font-weight: 600;
+  max-width: 80%;
+  margin: 0 auto;
   text-transform: uppercase;
 }
 #img_rect{
@@ -76,14 +82,16 @@ header  #img_header{
   height: 20px;
 }
 .title2{
-  margin-top: 40px;
+  margin: 40px auto 0;
+  max-width: 370px;
+  font-size: 42px;
 }
 .content_sec1, .content_hide, .content_sec{
   padding: 30px 70px;
   font-size: 20px;
   @media (max-width: 480px) {
-    padding: 30px;
-    font-size: 18px;
+    padding: 30px 12px;
+    font-size: 16px;
   }
 }
 
@@ -91,19 +99,23 @@ header  #img_header{
   margin-top: 30px;
 }
 #blacklist , .detail{
+  font-family: inter-bold;
   text-decoration: underline;
   font-size: 24px;
   color:black;
   margin-bottom: 5px;
+  font-weight: bold;
   @media (max-width: 480px) {
     font-size: 22px;
   }
 }
 .title3{
-  max-width: 75%;
+  max-width: 70%;
   margin: 40px auto;
+  font-size: 42px;
   @media (max-width: 480px) {
     max-width: 82%;
+    font-size: 35px;
   }
 }
 .arrow {
@@ -127,10 +139,17 @@ header  #img_header{
 .img_center_brume {
   background-image: url('../../assets/img_center_brume.png');
 }
+.img_center_echantillon {
+  background-image: url('../../assets/img_center_echantillon.png');
+}
 .product_sec3{
   background-color: #F7F2EC;
   padding: 30px 40px;
   margin-top: 30px;
+  @media (max-width: 480px) {
+   padding: 0;
+   padding-top: 40px;
+  }
 }
 .title4{
   font-size: 36px;
@@ -157,4 +176,15 @@ header  #img_header{
 #img_footer{
   height: 90px;
   margin-top: 30px;
+}
+.main .products.p-edit {
+  justify-content: flex-start;
+  overflow: auto;
+}
+.main .products {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }

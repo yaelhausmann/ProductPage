@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
 
   public myProduct: any;
   public allProducts: any = [];
+  public allProductsByRange: any = [];
   public isShowAdvice = false;
   public isShowVertus = false;
   constructor(
@@ -21,13 +22,17 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
       if (this.route.snapshot.paramMap.has('page_id')) {
         const id = this.route.snapshot.paramMap.get('page_id');
-        console.log(id)
         this.productService.getProducts()
           .subscribe((resP: any) => {
             this.allProducts = resP;
             this.myProduct = this.allProducts.find((c: any) => c.page_id === id)
+            this.allProducts.map((c: any) => {
+                if(c.range === this.myProduct.range ){
+                  this.allProductsByRange.push(c)
+                }
+            })
             console.log(this.myProduct)
-            console.log(this.myProduct.range)
+            console.log(this.allProductsByRange)
           });
       }
     }

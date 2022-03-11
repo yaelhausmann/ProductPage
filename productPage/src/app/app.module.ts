@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import {HttpClientModule} from '@angular/common/http';
+import  {  CommonModule  }  from  "@angular/common" ;
 
 const routes: Routes = [
   { path: 'product/:page_id', component: ProductComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
