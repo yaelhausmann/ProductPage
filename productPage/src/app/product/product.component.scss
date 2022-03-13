@@ -76,6 +76,9 @@ header  #img_header{
   max-width: 80%;
   margin: 0 auto;
   text-transform: uppercase;
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
 }
 #img_rect{
   width: 80%;
@@ -155,6 +158,7 @@ header  #img_header{
   font-size: 36px;
   @media (max-width: 480px) {
     font-size: 27px;
+    max-width: 94%;
   }
 }
 .temoignage{
@@ -177,9 +181,11 @@ header  #img_header{
   height: 90px;
   margin-top: 30px;
 }
-.main .products.p-edit {
-  justify-content: flex-start;
-  overflow: auto;
+.title_soin{
+  max-width: 50%;
+  @media (max-width: 480px) {
+    max-width: 75%;
+  }
 }
 .main .products {
   width: 95%;
@@ -187,4 +193,39 @@ header  #img_header{
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+.main .products .product-container {
+  margin-right: 16px;
+  width: 250px;
+  background: #F0F0EF;
+  box-shadow: 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+}
+.main .img_product{
+  margin-top: 30px;
+  width: 75px;
+  &.img_product_brume{
+    width:180px
+  }
+}
+.main .product_name a{
+   color: black !important;
+}
+.main .product_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 30px;
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+.main .product_name:first-letter {
+  text-transform: uppercase;
 }

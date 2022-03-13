@@ -9,7 +9,7 @@
     <div class="product_sec1">
       <div class="big_title">{{myProduct.sous_titre}}</div>
       <div class="title">
-        <span>{{myProduct.nom}}
+        <span>{{myProduct.name}}
           <img id="img_rect" src="assets/rectangle1.png" *ngIf="myProduct.range === 'BOOSTER'">
         </span></div>
         <ng-container *ngIf="myProduct.range === 'BOOSTER' || myProduct.range === 'ECHANTILLON'">
@@ -34,8 +34,8 @@
       <ng-container *ngIf="myProduct.range === 'BOOSTER'">
         <div class="title title3">VERTUS</div>
         <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
-        <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.vertus}}</div> 
-      </ng-container> 
+        <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.vertus}}</div>
+      </ng-container>
       <ng-container *ngIf="myProduct.range === 'PRET_VENTE'">
         <div class="title title3">Ingrédients</div>
         <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
@@ -62,27 +62,20 @@
     </div>
     </div>
     <div class="products_sec3">
+      <div class="title title3" *ngIf="myProduct.range === 'BOOSTER'">Tous nos boosters</div>
+      <div class="title title3 title_soin" *ngIf="myProduct.range !== 'BOOSTER'">voir nos autres soins</div>
+    <div class="products">
       <ng-container *ngFor="let product of allProductsByRange">
-          <!-- <div class="product normal"
-               [ngClass]="{'active': choosenCreamBase && choosenCreamBase.id === product.id , 'noActive': recommendedBase.id !== product.id}"
-          >
-              <div class="selected-for-you" [ngClass]="{'selected-for-you-yumi': APP_CONFIG.isYumiMode}" *ngIf="recommendedBase && recommendedBase.id === product.id">
-                  {{langageService.getKey(Langage.selectForYou)}}
+       <div class="product normal">
+              <div class="product-container">
+                <img src="assets/img_product_booster.png" class="img_product" *ngIf="myProduct.range === 'BOOSTER'">
+                <img src="assets/img_product_brume.jpg"  class="img_product img_product_brume"  *ngIf="myProduct.range === 'PRET_VENTE'">
+                <img src="assets/img_product_serum.png" class="img_product" *ngIf="myProduct.range === 'ECHANTILLON'">
+                <div class="product_name" ><a [href]="'/product/' + product.page_id">{{product.name}}</a></div>
               </div>
-              <div class="product-container base-edit" [ngClass]="{'product-container-yumi': APP_CONFIG.isYumiMode}">
-                  <div (click)="changeCreamBase(product)" class="click">
-                      <div class="select" ></div>
-                      <span>{{product.wp_textureType}}</span>
-                      <a>{{langageService.getKey(Langage.enrichi)}}{{product.wp_name.toLowerCase()}}</a>
-                      <img [src]="'assets/images/new-design/'+(APP_CONFIG.isYumiMode ? 'flacon-yumi' : 'custom_creme')+'.png'"  class="img-base"/>
-                  </div>
-                     <img src="assets/images/new/trianglePlein.png" [ngClass]="{'opened': showDescBase && showDescBase.id === product.id}"-->
-<!--                             (click)="showDescBase && showDescBase.id === product.id ? showDescBase = null : showDescBase = product">-->
-                  <!-- <div class="savoirPlus" (click)="showDescBase && showDescBase.id === product.id ? showDescBase = null : showDescBase = product">{{langageService.getKey(Langage.enSavoirPus)}}</div>
-              </div> -->
-<!--                    <div class="price" *ngIf="!(storage.get(StorageKey.codeCoupon))"> {{ product.price || '0'}},00€</div>-->
-          <!-- </div> --> 
+       </div>
       </ng-container>
+  </div>
   </div>
     <footer>
       <img id="img_footer" src="assets/bb.png"/>
