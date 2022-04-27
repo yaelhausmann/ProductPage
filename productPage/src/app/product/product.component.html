@@ -3,8 +3,8 @@
     <header>
       <img id="img_header" src="assets/abbi.png"/>
     </header>
-    <div class="img_top" [ngClass]="{'img_top_brume': myProduct.range === 'PRET_VENTE', 'img_top_echantillon': myProduct.range === 'ECHANTILLON'}">
-      <img id="img_product" alt="product">
+    <div class="img_top" [ngClass]="{'img_top_brume': myProduct.range === 'PRET_VENTE', 'img_top_echantillon': myProduct.range === 'ECHANTILLON', 'img_top_booster': myProduct.range === 'BOOSTER'}">
+      <img [src]="'https://marketplace.abbi.care/images/' + myProduct.image" *ngIf="myProduct.page_id !== '95'" alt="product" [ngClass]="{'img_huile': myProduct.page_id === '92', 'img_gel': myProduct.page_id === '96'}">
     </div>
     <div class="product_sec1">
       <div class="big_title">{{myProduct.sous_titre}}</div>
