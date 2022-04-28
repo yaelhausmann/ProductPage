@@ -15,37 +15,7 @@
     "temoignage": "Très bien, ne colle pas. Ma peau est plus tonique et il y a moins d’impuretés sur mon coton le soir quand je nettoie ma peau."
   },
   {
-    "page_id": null,
-    "range": "",
-    "titre": "SERUM COLLAGENE 30 ML",
-    "ean": 3760321220965,
-    "sous_titre": null,
-    "name": "SERUM COLLAGENE",
-    "slider_image": "",
-    "conseils_utilisation": "Appliquer quelques gouttes matin et soir sur l’ensemble du cou, du décolleté et du visage en insistant sur les contours.\n\nAstuces si vous utilisez également le sérum à l’acide hyaluronique : \nEn même temps, appliquer le sérum collagène sur l’ovale du visage.\nEn alternant le moment de l’application, favoriser l’application du sérum collège le soir.",
-    "slider2image": "",
-    "ingredients": "Water/Aqua, Glycerin, Alumina, Polyglyceryl-3 Cocoate, Polyglyceryl-4 Caprate, Polyglyceryl-6 Caprylate, Polyglyceryl-6 Ricinoleate, Polyacrylate Crosspolymer-6, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Pentylene Glycol, Butylene Glycol, Sodium Hydroxide, Salicylic Acid, Sodium Hyaluronate, Citric Acid, Biosaccharide Gum-1,\nVerbena Officinalis Extract, Dill/Peucedanum Graveolens Extract, Sodium Citrate, Hydrolyzed Soy Flour, Sodium Gluconate,\nSoluble Collagen, Magnesium Aspartate, Zinc Gluconate, Sodium Levulinate, Polysorbate 60, Sorbitan Isostearate, Glyceryl\nCaprylate, Sorbic Acid, Sodium Anisate, 1,2-Hexanediol, Caprylyl Glycol, Copper Gluconate, Xanthan Gum, Fragrance/Parfum,\nSodium Benzoate, Benzyl Alcohol",
-    "vertus": "",
-    "temoignage_date": "Mireille  <br> 18/11/2021",
-    "temoignage": "Très bon produit, application agréable. Je l’utilise depuis un mois et ma peau est plus lisse, surtout au niveau des contours du visage."
- },
-  {
-    "page_id": null,
-    "range": "",
-    "titre": "SERUM HYALURONIQUE 30 ML",
-    "ean": 3760321220958,
-    "sous_titre": null,
-    "name": "SERUM ACIDE HYALURONIQUE",
-    "slider_image": "",
-    "conseils_utilisation": "Appliquer quelques gouttes matin et soir sur l’ensemble du cou et du visage en insistant sur les sillons.\n\nAstuces si vous utilisez également le sérum collagène :\nEn même temps, appliquer le sérum acide hyaluronique localement sur les sillons.\nEn alternant le moment de l’application, favoriser l’application du sérum acide hyaluronique le matin. \n",
-    "slider2image": "",
-    "ingredients": "Water/Aqua, Glycerin, Sorbitol, Xylitylglucoside, Polyglyceryl-3 Cocoate, Polyglyceryl-4 Caprate, Polyglyceryl-6 Caprylate, Polyglyceryl-6 Ricinoleate, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Propanediol, Caprylyl/Capryl Glucoside, Salicylic Acid, Sodium Gluconate, Glucose, Sodium Hydroxide, Sorbic Acid, Disodium Phosphate, Xanthan Gum,\nSodium Phosphate, Saccharide Isomerate, Glyceryl Caprylate, Anhydroxylitol, Xylitol, Fragrance/Parfum, Benzyl Alcohol",
-    "vertus": "",
-    "temoignage_date": "Brigitte   <br>  03/012021",
-    "temoignage": "J’utilise le sérum matin et soir avec ma crème de jour ou de nuit. Après deux semaines d’utilisation, je vois déjà les résultats, ma peau est plus hydratée et plus souple."
-  },
-  {
-    "page_id": "92",
+    "page_id": "94",
     "range": "PRET_VENTE",
     "titre": "HUILE DE BEAUTE 30 ML",
     "ean": 3760321220972,
@@ -106,7 +76,7 @@
  },
   {
     "page_id": "91",
-    "range": "ECHANTILLON",
+    "range": "PRET_VENTE",
     "titre": "CONTOUR DES YEUX 15ML",
     "ean": 3760321220989,
     "sous_titre": null,

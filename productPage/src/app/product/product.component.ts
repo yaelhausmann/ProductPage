@@ -22,7 +22,6 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
       if (this.route.snapshot.paramMap.has('page_id')) {
         const id = this.route.snapshot.paramMap.get('page_id');
-        console.log(id)
         this.productService.getProducts()
           .subscribe((resP: any) => {
             this.allProducts = resP;
@@ -31,14 +30,20 @@ export class ProductComponent implements OnInit {
                 .subscribe((prod: any) => {
                   this.myProduct.image = prod[0].image;
                 });
-            this.allProducts.map((c: any) => {
-                if(c.range === this.myProduct.range ){
-                  if ((this.myProduct.range === 'ECHANTILLON' && c.page_id !== '92') || (this.myProduct.range === 'PRET_VENTE' && c.page_id !== '97' && c.page_id !== '98'))
-                  this.allProductsByRange.push(c)
-                }
-            })
-            console.log(this.myProduct)
-            console.log(this.allProductsByRange)
+            let productsCategory: Array<any>;
+            this.productService.getProductsGalienbyCategory('range', this.myProduct.range !== 'ECHANTILLON' ? this.myProduct.range : 'PRODUIT_OFFERT')
+              .subscribe((prods: any) => {
+                productsCategory = prods;
+                this.allProductsByRange = [];
+                this.allProducts.map((c: any) => {
+                  if(c.range === this.myProduct.range ){
+                    if (c.ean !== this.myProduct.ean && c.page_id !== '97' && c.page_id !== '98' && c.page_id !== '95') {
+                      c.image = productsCategory.find((p: any) => p.ean === c.ean).image;
+                      this.allProductsByRange.push(c)
+                    }
+                  }
+                })
+              });
           },
             error => {
               console.log(error);

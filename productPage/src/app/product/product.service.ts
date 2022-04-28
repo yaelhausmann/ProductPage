@@ -22,5 +22,9 @@ export class ProductService {
     return this.http.get<any>(`https://marketplace.abbi.care/products-v2?ean=${ean}`, this.headers)
   }
 
+  public getProductsGalienbyCategory(category: string, type: string): Observable<any> {
+    return this.http.get<any>(`https://marketplace.abbi.care/products-v2?${category}=${type}`, this.headers)
+  }
+
 
 }

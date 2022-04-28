@@ -4,7 +4,7 @@
       <img id="img_header" src="assets/abbi.png"/>
     </header>
     <div class="img_top" [ngClass]="{'img_top_brume': myProduct.range === 'PRET_VENTE', 'img_top_echantillon': myProduct.range === 'ECHANTILLON', 'img_top_booster': myProduct.range === 'BOOSTER'}">
-      <img [src]="'https://marketplace.abbi.care/images/' + myProduct.image" *ngIf="myProduct.page_id !== '95'" alt="product" [ngClass]="{'img_huile': myProduct.page_id === '92', 'img_gel': myProduct.page_id === '96'}">
+      <img [src]="'https://marketplace.abbi.care/images/' + myProduct.image" *ngIf="myProduct.page_id !== '95'" alt="product" [ngClass]="{'img_huile': myProduct.page_id === '94', 'img_gel': myProduct.page_id === '96'}">
     </div>
     <div class="product_sec1">
       <div class="big_title">{{myProduct.sous_titre}}</div>
@@ -68,10 +68,10 @@
       <ng-container *ngFor="let product of allProductsByRange">
        <div class="product normal">
               <div class="product-container">
-                <img src="assets/img_product_booster.png" class="img_product" *ngIf="myProduct.range === 'BOOSTER'">
-                <img src="assets/img_product_brume.jpg"  class="img_product img_product_brume"  *ngIf="myProduct.range === 'PRET_VENTE'">
-                <img src="assets/img_product_serum.png" class="img_product" *ngIf="myProduct.range === 'ECHANTILLON'">
-                <div class="product_name" ><a [href]="'/product/' + product.page_id">{{product.name}}</a></div>
+                <img [src]="'https://marketplace.abbi.care/images/' + product.image" class="img_product" *ngIf="myProduct.range === 'BOOSTER'">
+                <img [src]="'https://marketplace.abbi.care/images/' + product.image" class="img_product img_product_brume"  *ngIf="myProduct.range === 'PRET_VENTE'">
+                <img [src]="'https://marketplace.abbi.care/images/' + product.image" class="img_product" *ngIf="myProduct.range === 'ECHANTILLON'">
+                <div class="product_name" ><a [href]="'/product/' + product.page_id">{{product.titre}}</a></div>
               </div>
        </div>
       </ng-container>

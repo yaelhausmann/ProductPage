@@ -255,12 +255,12 @@ header  #img_header{
   }
 }
 .main .products {
-  width: 95%;
+  width: 96%;
   margin: auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  justify-content: flex-start;
+  //justify-content: flex-start;
   overflow: auto;
 }
 
@@ -276,10 +276,11 @@ header  #img_header{
   height: 300px;
 }
 .main .img_product{
-  margin-top: 30px;
-  width: 75px;
+  //margin-top: 30px;
+  width: 220px;
   &.img_product_brume{
-    width:180px
+    width:200px;
+    margin-bottom: 30px;
   }
 }
 .main .product_name a{
@@ -287,9 +288,9 @@ header  #img_header{
 }
 .main .product_name {
   font-family: Inter-Bold, sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-style: italic;
-  margin-top: 30px;
+  //margin-top: 30px;
   text-decoration: underline;
   text-transform: lowercase;
 }
