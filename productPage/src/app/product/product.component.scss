@@ -47,6 +47,12 @@ header  #img_header{
   }
 }
 .img_top_booster{
+  background-size: cover !important;
+  height: 660px;
+  background-position: center;
+  @media (max-width: 768px) {
+    height: 42vh;
+  }
   img{
     height: 320px;
     position: absolute;
@@ -274,6 +280,16 @@ header  #img_header{
   flex-direction: column;
   align-items: center;
   height: 300px;
+  &.sliders_booster{
+    background: #FFFFFF;
+    width: 220px;
+    .img_product{
+      width: 200px;
+      @media (max-width: 480px) {
+        width: 175px;
+      }
+    }
+  }
 }
 .main .img_product{
   //margin-top: 30px;
