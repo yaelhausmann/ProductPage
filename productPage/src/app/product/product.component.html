@@ -37,7 +37,7 @@
       <ng-container *ngIf="myProduct.range === 'BOOSTER'">
         <div class="title title3">PROPRIÉTÉS</div>
         <div class="detail" (click)="isShowVertus = !isShowVertus"><div>Voir </div><div><img class="arrow" src="assets/arrow.png"></div></div>
-        <div class="vertus content_hide" *ngIf="isShowVertus">{{myProduct.vertus}}</div>
+        <div class="vertus1 content_hide" *ngIf="isShowVertus" [innerHTML]="myProduct.vertus"></div>
       </ng-container>
       <ng-container *ngIf="myProduct.range === 'PRET_VENTE'">
         <div class="title title3">Ingrédients</div>
@@ -67,8 +67,8 @@
     <div class="products_sec3">
       <div class="title title3" *ngIf="myProduct.range === 'BOOSTER'">Tous nos boosters</div>
       <div class="title title3 title_soin" *ngIf="myProduct.range !== 'BOOSTER'">voir nos autres soins</div>
-    <div class="products">
-      <ng-container *ngFor="let product of allProductsByRange">
+    <div class="products" [ngClass]="{'noSlider': allProductsByRange.length < 3}">
+      <ng-container *ngFor="let product of allProductsByRange" >
        <div class="product normal">
               <div class="product-container" [ngClass]="{'sliders_booster': myProduct.range === 'BOOSTER'}">
                 <img [src]="'/assets/images_booster/ca-' + product.page_id + '.png/'" class="img_product" *ngIf="myProduct.range === 'BOOSTER'">

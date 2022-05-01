@@ -42,7 +42,8 @@ export class ProductComponent implements OnInit {
                       this.allProductsByRange.push(c)
                     }
                   }
-                })
+               })
+                console.log(this.allProductsByRange)
               });
           },
             error => {

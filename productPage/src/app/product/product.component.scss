@@ -165,9 +165,11 @@ header  #img_header{
 .content_sec1, .content_hide, .content_sec{
   padding: 30px 70px;
   font-size: 20px;
+  max-width: 590px;
+  margin: 0 auto;
   @media (max-width: 480px) {
     padding: 30px 12px;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -265,9 +267,10 @@ header  #img_header{
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
   //justify-content: flex-start;
   overflow: auto;
+  &.noSlider {
+    justify-content: center;}
 }
 
 .main .products .product-container {
