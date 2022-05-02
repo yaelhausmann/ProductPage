@@ -71,7 +71,7 @@
       <ng-container *ngFor="let product of allProductsByRange" >
        <div class="product normal">
               <div class="product-container" [ngClass]="{'sliders_booster': myProduct.range === 'BOOSTER'}">
-                <img [src]="'/assets/images_booster/ca-' + product.page_id + '.png/'" class="img_product" *ngIf="myProduct.range === 'BOOSTER'">
+                <img [src]="'/assets/images_booster/ca-' + product.page_id + '.png'" class="img_product" *ngIf="myProduct.range === 'BOOSTER'">
                 <img [src]="'https://marketplace.abbi.care/images/' + product.image" class="img_product img_product_brume"  *ngIf="myProduct.range === 'PRET_VENTE'">
                 <img [src]="'https://marketplace.abbi.care/images/' + product.image" class="img_product" *ngIf="myProduct.range === 'ECHANTILLON'">
                 <div class="product_name" ><a [href]="'/product/' + product.page_id">{{product.titre}}</a></div>
